@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--CSS-->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="shortcut icon" href="iconsSVG/whater.svg">
+
+  <!--ICON FONT AWESOME-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <!--ICONS MATERIALDESIGN-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <title>Weather App</title>
+</head>
+<body class="grid-container">
+  <!--ASIDEBAR-->
+  <aside class="sidebar">
+    <div class="sticky__sidebar">
+      <form id="search__submit">
+        <input type="text" id="search__input" placeholder="Ingresa la ciudad" required>
+          <button type="submit">Buscar</button>
+      </form>
+      <!--FIN SECCION BUSCAR-->
+
+      <div id="weather__icon" class="container__img-weather">
+        <!--IMAGEN CLIMA-->
+        
+      </div>
+
+      <div class="container__temp">
+        <!--TEMPERATURA °-->
+        <div class="span__temp" id="degreeNumber"></div>
+        <div class="span__temp">°c</div>
+      </div>
+
+      <div class="container__weather">
+        <!--CLIMA-->
+        <span class="weather" id="temperatureDescription"></span>
+      </div>
+
+      <div class="container__fecha">
+        <!--FECHA CLIMA-->
+        <span class="span__fecha" id="date"></span>
+      </div>
+      <div class="container__city">
+        <!--CIUDAD-->
+        <span class="span__city" id="city"></span>
+        <span class="material-icons marker__icon">place</span>
+      </div>
+    </div>
+  </aside>
+
+
+  <!--SECCION MAS INFO-->
+  <article class="article">
+    <div class="measuring__type">
+      <!--TIPOS DE MEDICION-->
+      <div class="container__btn-c">
+        <div class="btn__celsius">
+          <span class="span__temp-celsius">°C</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="container__prox-days">
+      <!--TEMPERATURA PROXIMOS DIAS-->
+      <div class="prox__days">
+        <span class="span__day">Mañana</span>
+        <div id="weather__icon-day1" class="img__weather-day">
+        </div>
+        <div class="temp__max-min">
+          <div class="tempMax">
+            <span class="temp-max-c" id="temMaxMor"></span>
+            <div class="temp-max-c">°c</div>
+          </div>
+          <div class="tempMin">
+            <span class="temp-max-f" id="temMinMor"></span>
+            <div class="temp-max-f">°c</div>
+          </div>
+        </div>
+      </div>
+      <div class="prox__days">
+        <span class="span__day" id="dateDay2"></span>
+        <div id="weather__icon-day2" class="img__weather-day">
+        </div>
+        <div class="temp__max-min">
+          <div class="tempMax">
+            <span class="temp-max-c" id="temMaxDay2"></span>
+            <div class="temp-max-c">°c</div>
+          </div>
+          <div class="tempMin">
+            <span class="temp-max-f" id="temMinDay2"></span>
+            <div class="temp-max-f">°c</div>
+          </div>
+        </div>
+      </div>
+      <div class="prox__days">
+        <span class="span__day" id="dateDay3"></span>
+        <div id="weather__icon-day3" class="img__weather-day">
+        </div>
+        <div class="temp__max-min">
+          <div class="tempMax">
+            <span class="temp-max-c" id="temMaxDay3"></span>
+            <div class="temp-max-c">°c</div>
+          </div>
+          <div class="tempMin">
+            <span class="temp-max-f" id="temMinDay3"></span>
+            <div class="temp-max-f">°c</div>
+          </div>
+        </div>
+      </div>
+      <div class="prox__days">
+        <span class="span__day" id="dateDay4"></span>
+        <div id="weather__icon-day4" class="img__weather-day">
+        </div>
+        <div class="temp__max-min">
+          <div class="tempMax">
+            <span class="temp-max-c" id="temMaxDay4"></span>
+            <div class="temp-max-c">°c</div>
+          </div>
+          <div class="tempMin">
+            <span class="temp-max-f" id="temMinDay4"></span>
+            <div class="temp-max-f">°c</div>
+          </div>
+        </div>
+      </div>
+      <div class="prox__days">
+        <span class="span__day" id="dateDay5"></span>
+        <div id="weather__icon-day5" class="img__weather-day">
+        </div>
+        <div class="temp__max-min">
+          <div class="tempMax">
+            <span class="temp-max-c" id="temMaxDay5"></span>
+            <div class="temp-max-c">°c</div>
+          </div>
+          <div class="tempMin">
+            <span class="temp-max-f" id="temMinDay5"></span>
+            <div class="temp-max-f">°c</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container__text-highlight">
+      <span class="text__highlight">Lo más destacado de hoy</span>
+    </div>
+
+    <div class="container__highlight">
+      <!--SECCION LO MAS DESTACADO-->
+      <div class="wind">
+        <!--VIENTO-->
+        <span class="span__wind">Velocidad del viento</span>
+        <div class="container__date-wind">
+          <span class="span__align-date" id="speed"></span>
+          <div class="span__align-date">mph</div>
+        </div>
+      </div>
+
+      <div class="humidity">
+        <!--HUMEAD-->
+        <span class="span__humidity">Humedad</span>
+        <div class="container__date-humidity">
+          <span class="span__align-date" id="humidityPercentage"></span>
+          <div class="span__align-date">%</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container__highlight">
+      <div class="visibility">
+        <!--VISIVIDAD-->
+        <span class="span__visibility">Grados del viento</span>
+        <div class="container__date-visibility">
+          <span class="span__align-date" id="degreeWind"></span>
+          <div class="span__align-date">°</div>
+        </div>
+      </div>
+
+      <div class="pressure">
+        <!--PRESION-->
+        <span class="span__pressure">Presión</span>
+        <div class="container__date-pressure">
+          <span class="span__align-date" id="pressureTemp"></span>
+          <div class="span__align-date">mb</div>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <script src="js/metaweather.js"></script>
+</body>
+
+</html>
